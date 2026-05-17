@@ -1,26 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inertia-v1 blog – 文档</title><link>/docs/</link><description>Recent content in 文档 on Inertia-v1 blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>界面右移</title><link>/docs/hugo%E4%B8%BB%E9%A2%98hextra%E4%B8%80%E4%BA%9Bbug/%E7%95%8C%E9%9D%A2%E5%8F%B3%E7%A7%BBbug/</link><pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate><guid>/docs/hugo%E4%B8%BB%E9%A2%98hextra%E4%B8%80%E4%BA%9Bbug/%E7%95%8C%E9%9D%A2%E5%8F%B3%E7%A7%BBbug/</guid><description>
-&lt;h2&gt;现象&lt;span class="hx:absolute hx:-mt-20" id="现象"&gt;&lt;/span&gt;
-&lt;a href="#%e7%8e%b0%e8%b1%a1" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在文档页间切换时，内容区域整体左移/右移跳动。&lt;/p&gt;
-&lt;h2&gt;原因&lt;span class="hx:absolute hx:-mt-20" id="原因"&gt;&lt;/span&gt;
-&lt;a href="#%e5%8e%9f%e5%9b%a0" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;内容短的页面无滚动条，内容长的页面出现滚动条（约 15px），导致 &lt;code&gt;clientWidth&lt;/code&gt; 变化，页面布局偏移。&lt;/p&gt;
-&lt;h2&gt;修复&lt;span class="hx:absolute hx:-mt-20" id="修复"&gt;&lt;/span&gt;
-&lt;a href="#%e4%bf%ae%e5%a4%8d" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;assets/css/custom.css&lt;/code&gt; 中添加：&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;overflow-y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;scroll&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="复制代码"
-aria-label="复制代码"
-data-copied-label="已复制！"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;滚动条始终占位，页面宽度恒定。&lt;/p&gt;</description></item><item><title>快速开始</title><link>/docs/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/getting-started/</guid><description/></item><item><title>更改默认提示词</title><link>/docs/opencode%E6%95%99%E7%A8%8B/%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8F%90%E7%A4%BA%E8%AF%8D/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opencode%E6%95%99%E7%A8%8B/%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8F%90%E7%A4%BA%E8%AF%8D/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inertia-v1 blog – Opencode教程</title><link>/docs/opencode%E6%95%99%E7%A8%8B/</link><description>Recent content in Opencode教程 on Inertia-v1 blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="/docs/opencode%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>更改默认提示词</title><link>/docs/opencode%E6%95%99%E7%A8%8B/%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8F%90%E7%A4%BA%E8%AF%8D/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/opencode%E6%95%99%E7%A8%8B/%E6%9B%B4%E6%94%B9%E9%BB%98%E8%AE%A4%E6%8F%90%E7%A4%BA%E8%AF%8D/</guid><description>
 &lt;div class="hx:text-xs hx:text-gray-500 hx:mb-4"&gt;创建于 2026-05-18&lt;/div&gt;
 &lt;p&gt;OpenCode 默认提示词决定了 AI 助手的基本行为和风格。本文介绍两种自定义方式：完全覆盖和追加扩展。&lt;/p&gt;
 &lt;h2&gt;方法一：通过 Webhook 查看并覆盖&lt;span class="hx:absolute hx:-mt-20" id="方法一通过-webhook-查看并覆盖"&gt;&lt;/span&gt;
@@ -209,27 +187,4 @@ data-copied-label="已复制！"
 &lt;h3&gt;Q: 如何恢复默认？&lt;span class="hx:absolute hx:-mt-20" id="q-如何恢复默认"&gt;&lt;/span&gt;
 &lt;a href="#q-%e5%a6%82%e4%bd%95%e6%81%a2%e5%a4%8d%e9%bb%98%e8%ae%a4" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;删除配置文件中的 &lt;code&gt;agent.build.prompt&lt;/code&gt; 字段即可恢复默认提示词。&lt;/p&gt;
 &lt;h3&gt;Q: 提示词支持哪些格式？&lt;span class="hx:absolute hx:-mt-20" id="q-提示词支持哪些格式"&gt;&lt;/span&gt;
-&lt;a href="#q-%e6%8f%90%e7%a4%ba%e8%af%8d%e6%94%af%e6%8c%81%e5%93%aa%e4%ba%9b%e6%a0%bc%e5%bc%8f" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;支持纯文本、Markdown 格式。文件路径支持 &lt;code&gt;.md&lt;/code&gt;、&lt;code&gt;.txt&lt;/code&gt; 扩展名。&lt;/p&gt;</description></item><item><title>复制按钮不可用</title><link>/docs/hugo%E4%B8%BB%E9%A2%98hextra%E4%B8%80%E4%BA%9Bbug/%E5%A4%8D%E5%88%B6%E6%8C%89%E9%92%AE%E4%B8%8D%E5%8F%AF%E7%94%A8/</link><pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate><guid>/docs/hugo%E4%B8%BB%E9%A2%98hextra%E4%B8%80%E4%BA%9Bbug/%E5%A4%8D%E5%88%B6%E6%8C%89%E9%92%AE%E4%B8%8D%E5%8F%AF%E7%94%A8/</guid><description>
-&lt;h2&gt;现象&lt;span class="hx:absolute hx:-mt-20" id="现象"&gt;&lt;/span&gt;
-&lt;a href="#%e7%8e%b0%e8%b1%a1" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;页面右上角&amp;quot;复制 Markdown&amp;quot;按钮点击无反应，浏览器控制台报 &lt;code&gt;Failed to fetch&lt;/code&gt; 错误。&lt;/p&gt;
-&lt;h2&gt;原因&lt;span class="hx:absolute hx:-mt-20" id="原因"&gt;&lt;/span&gt;
-&lt;a href="#%e5%8e%9f%e5%9b%a0" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Hextra 的复制按钮通过 &lt;code&gt;fetch(button.dataset.url)&lt;/code&gt; 获取 Markdown 源文件。&lt;code&gt;data-url&lt;/code&gt; 由 Hugo 的 &lt;code&gt;baseURL&lt;/code&gt; 生成，本地开发时指向 &lt;code&gt;https://inertia-v1.github.io/&lt;/code&gt;，而服务运行在 &lt;code&gt;localhost&lt;/code&gt;，请求跨域 404。&lt;/p&gt;
-&lt;h2&gt;修复&lt;span class="hx:absolute hx:-mt-20" id="修复"&gt;&lt;/span&gt;
-&lt;a href="#%e4%bf%ae%e5%a4%8d" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将 &lt;code&gt;hugo.toml&lt;/code&gt; 中的 &lt;code&gt;baseURL&lt;/code&gt; 改为相对路径：&lt;/p&gt;
-&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
-&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-toml" data-lang="toml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;baseURL&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
-&lt;button
-class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
-title="复制代码"
-aria-label="复制代码"
-data-copied-label="已复制！"
-&gt;
-&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
-&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;本地和生产环境均可正确解析，复制按钮正常工作。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：使用相对路径时，&lt;code&gt;hugo server&lt;/code&gt; 无需额外指定 &lt;code&gt;--baseURL&lt;/code&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;</description></item></channel></rss>
+&lt;a href="#q-%e6%8f%90%e7%a4%ba%e8%af%8d%e6%94%af%e6%8c%81%e5%93%aa%e4%ba%9b%e6%a0%bc%e5%bc%8f" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;支持纯文本、Markdown 格式。文件路径支持 &lt;code&gt;.md&lt;/code&gt;、&lt;code&gt;.txt&lt;/code&gt; 扩展名。&lt;/p&gt;</description></item></channel></rss>
