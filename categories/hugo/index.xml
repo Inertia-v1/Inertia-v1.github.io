@@ -1,0 +1,134 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Inertia-v1 blog – Hugo</title><link>/categories/hugo/</link><description>Recent content in Hugo on Inertia-v1 blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>页面切换时布局偏移修复</title><link>/docs/hextra-%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E6%97%B6%E5%B8%83%E5%B1%80%E5%81%8F%E7%A7%BB%E4%BF%AE%E5%A4%8D/</link><pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate><guid>/docs/hextra-%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E6%97%B6%E5%B8%83%E5%B1%80%E5%81%8F%E7%A7%BB%E4%BF%AE%E5%A4%8D/</guid><description>
+&lt;h2&gt;现象&lt;span class="hx:absolute hx:-mt-20" id="现象"&gt;&lt;/span&gt;
+&lt;a href="#%e7%8e%b0%e8%b1%a1" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在文档页间切换时，内容区域整体左移/右移跳动。&lt;/p&gt;
+&lt;h2&gt;原因&lt;span class="hx:absolute hx:-mt-20" id="原因"&gt;&lt;/span&gt;
+&lt;a href="#%e5%8e%9f%e5%9b%a0" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;内容短的页面无滚动条，内容长的页面出现滚动条（约 15px），导致 &lt;code&gt;clientWidth&lt;/code&gt; 变化，页面布局偏移。&lt;/p&gt;
+&lt;h2&gt;修复&lt;span class="hx:absolute hx:-mt-20" id="修复"&gt;&lt;/span&gt;
+&lt;a href="#%e4%bf%ae%e5%a4%8d" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;assets/css/custom.css&lt;/code&gt; 中添加：&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-css" data-lang="css"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;overflow-y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;scroll&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="复制代码"
+aria-label="复制代码"
+data-copied-label="已复制！"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;滚动条始终占位，页面宽度恒定。&lt;/p&gt;</description></item><item><title>复制按钮跨域失败修复</title><link>/docs/hextra-%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/ai%E8%87%AA%E9%85%8D%E7%BD%AE%E7%9A%84%E9%94%99%E8%AF%AF/%E5%A4%8D%E5%88%B6%E6%8C%89%E9%92%AE%E8%B7%A8%E5%9F%9F%E5%A4%B1%E8%B4%A5%E4%BF%AE%E5%A4%8D/</link><pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate><guid>/docs/hextra-%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/ai%E8%87%AA%E9%85%8D%E7%BD%AE%E7%9A%84%E9%94%99%E8%AF%AF/%E5%A4%8D%E5%88%B6%E6%8C%89%E9%92%AE%E8%B7%A8%E5%9F%9F%E5%A4%B1%E8%B4%A5%E4%BF%AE%E5%A4%8D/</guid><description>
+&lt;h2&gt;现象&lt;span class="hx:absolute hx:-mt-20" id="现象"&gt;&lt;/span&gt;
+&lt;a href="#%e7%8e%b0%e8%b1%a1" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;页面右上角&amp;quot;复制 Markdown&amp;quot;按钮点击无反应，浏览器控制台报 &lt;code&gt;Failed to fetch&lt;/code&gt; 错误。&lt;/p&gt;
+&lt;h2&gt;原因&lt;span class="hx:absolute hx:-mt-20" id="原因"&gt;&lt;/span&gt;
+&lt;a href="#%e5%8e%9f%e5%9b%a0" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Hextra 的复制按钮通过 &lt;code&gt;fetch(button.dataset.url)&lt;/code&gt; 获取 Markdown 源文件。&lt;code&gt;data-url&lt;/code&gt; 由 Hugo 的 &lt;code&gt;baseURL&lt;/code&gt; 生成，本地开发时指向 &lt;code&gt;https://inertia-v1.github.io/&lt;/code&gt;，而服务运行在 &lt;code&gt;localhost&lt;/code&gt;，请求跨域 404。&lt;/p&gt;
+&lt;h2&gt;修复&lt;span class="hx:absolute hx:-mt-20" id="修复"&gt;&lt;/span&gt;
+&lt;a href="#%e4%bf%ae%e5%a4%8d" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将 &lt;code&gt;hugo.toml&lt;/code&gt; 中的 &lt;code&gt;baseURL&lt;/code&gt; 改为相对路径：&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-toml" data-lang="toml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nx"&gt;baseURL&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/&amp;#39;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="复制代码"
+aria-label="复制代码"
+data-copied-label="已复制！"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;本地和生产环境均可正确解析，复制按钮正常工作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：使用相对路径时，&lt;code&gt;hugo server&lt;/code&gt; 无需额外指定 &lt;code&gt;--baseURL&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>文章时间不显示问题修复</title><link>/docs/hextra-%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/ai%E8%87%AA%E9%85%8D%E7%BD%AE%E7%9A%84%E9%94%99%E8%AF%AF/%E6%96%87%E7%AB%A0%E6%97%B6%E9%97%B4%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/</link><pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate><guid>/docs/hextra-%E4%B8%BB%E9%A2%98%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/ai%E8%87%AA%E9%85%8D%E7%BD%AE%E7%9A%84%E9%94%99%E8%AF%AF/%E6%96%87%E7%AB%A0%E6%97%B6%E9%97%B4%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/</guid><description>
+&lt;h2&gt;问题&lt;span class="hx:absolute hx:-mt-20" id="问题"&gt;&lt;/span&gt;
+&lt;a href="#%e9%97%ae%e9%a2%98" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;配置了 &lt;code&gt;displayUpdatedDate = true&lt;/code&gt; 和 &lt;code&gt;enableGitInfo = true&lt;/code&gt;，但文章底部不显示时间。&lt;/p&gt;
+&lt;h2&gt;原因&lt;span class="hx:absolute hx:-mt-20" id="原因"&gt;&lt;/span&gt;
+&lt;a href="#%e5%8e%9f%e5%9b%a0" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;TOML 配置结构错误：&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-toml" data-lang="toml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;enable&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;displayUpdatedDate&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt; &lt;span class="c"&gt;# 被解析为 params.footer.displayUpdatedDate&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="复制代码"
+aria-label="复制代码"
+data-copied-label="已复制！"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;displayUpdatedDate&lt;/code&gt; 位于 &lt;code&gt;[params.footer]&lt;/code&gt; 之后，被解析为子段属性。&lt;/p&gt;
+&lt;h2&gt;修复&lt;span class="hx:absolute hx:-mt-20" id="修复"&gt;&lt;/span&gt;
+&lt;a href="#%e4%bf%ae%e5%a4%8d" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将字段移到 &lt;code&gt;[params]&lt;/code&gt; 段首部：&lt;/p&gt;
+&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-toml" data-lang="toml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;displayUpdatedDate&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nx"&gt;dateFormat&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;2006年1月2日&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;navbar&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;# ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;params&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;# ...&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="复制代码"
+aria-label="复制代码"
+data-copied-label="已复制！"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2&gt;时间显示条件&lt;span class="hx:absolute hx:-mt-20" id="时间显示条件"&gt;&lt;/span&gt;
+&lt;a href="#%e6%97%b6%e9%97%b4%e6%98%be%e7%a4%ba%e6%9d%a1%e4%bb%b6" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方式&lt;/th&gt;
+&lt;th&gt;配置&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Git 自动获取&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;enableGitInfo = true&lt;/code&gt; + 文件已提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;手动指定&lt;/td&gt;
+&lt;td&gt;front matter 添加 &lt;code&gt;date&lt;/code&gt; / &lt;code&gt;lastmod&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Git 自动获取的前提条件&lt;span class="hx:absolute hx:-mt-20" id="git-自动获取的前提条件"&gt;&lt;/span&gt;
+&lt;a href="#git-%e8%87%aa%e5%8a%a8%e8%8e%b7%e5%8f%96%e7%9a%84%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;启用 &lt;code&gt;enableGitInfo = true&lt;/code&gt; 后，Git 自动获取文章时间：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;md 源文件必须被 Git 跟踪（&lt;code&gt;git add&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;必须已提交（&lt;code&gt;git commit&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;部署时需重新构建（非纯静态部署）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;未跟踪或未提交的文件没有 Git 历史，&lt;code&gt;.Lastmod&lt;/code&gt; 无法获取时间。纯静态部署（只上传 public 目录）不触发 Git 信息获取。&lt;/p&gt;
+&lt;h3&gt;手动指定示例&lt;span class="hx:absolute hx:-mt-20" id="手动指定示例"&gt;&lt;/span&gt;
+&lt;a href="#%e6%89%8b%e5%8a%a8%e6%8c%87%e5%ae%9a%e7%a4%ba%e4%be%8b" class="subheading-anchor" aria-label="此章节的永久链接"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;date&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2025-05-17&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;lastmod&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ld"&gt;2025-05-18&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nn"&gt;---&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="复制代码"
+aria-label="复制代码"
+data-copied-label="已复制！"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>
